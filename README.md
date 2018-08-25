@@ -3,12 +3,12 @@
 
 ## 1.项目准备
 
-###1.1项目描述
+### 1.1项目描述
 
 1. 使用vue全家桶+ES6+webpack等前端技术
 2. 采用模块化、组件化、工程化的模式开发
 
-###1.2技术选型
+### 1.2技术选型
 
 1. 前台数据处理/交互/组件化:vue、vue-router、vuex、mint-ui、vue-lazyload、vue-scroller、better-scroll、swiper、moment、date-fns
 2. 前后交互
@@ -19,21 +19,21 @@
 4. 项目构件/工程化：webpack、vue-cli、eslint
 5. css预编译器：stylus
 
-###1.3前端路由
+### 1.3前端路由
 
 ![前端路由](./Explain/img/前端路由.png)
 
-###1.4API接口
+### 1.4API接口
 
 ![API接口](./Explain/img/API接口.png)
 
-###1.5vue组件
+### 1.5vue组件
 
 ![vue组件](./Explain/img/vue组件.png)
 
-##2.开发详解
+## 2.开发详解
 
-###2.1项目开启
+### 2.1项目开启
 
 > 使用vue-cli(脚手架)搭建项目
 ```
