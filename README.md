@@ -9,6 +9,7 @@
 2. 采用模块化、组件化、工程化的模式开发
 
 ###1.2技术选型
+
 1. 前台数据处理/交互/组件化:vue、vue-router、vuex、mint-ui、vue-lazyload、vue-scroller、better-scroll、swiper、moment、date-fns
 2. 前后交互
 	1. mock数据：mockjs
@@ -19,17 +20,21 @@
 5. css预编译器：stylus
 
 ###1.3前端路由
+
 ![前端路由](./Explain/img/前端路由.png)
 
 ###1.4API接口
+
 ![API接口](./Explain/img/API接口.png)
 
 ###1.5vue组件
+
 ![vue组件](./Explain/img/vue组件.png)
 
 ##2.开发详解
 
 ###2.1项目开启
+
 > 使用vue-cli(脚手架)搭建项目
 ```
 npm install -g vue-cli        //下载vue-cli
