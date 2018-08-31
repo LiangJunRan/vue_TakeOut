@@ -6,16 +6,27 @@
 </template>
 
 <script>
-	
+	import {mapActions} from 'vuex'
 	import FooterGuide from './components/FooterGuide/FooterGuide.vue'
+	import {reqFoodTypes} from './API'
 	
 	export default {
 		
-	components:{
-		FooterGuide
-	},
+		components:{
+			FooterGuide
+		},
 		
-}
+		methods:{
+			...mapActions(['getAddress'])
+		},
+		
+		mounted () {
+			console.log("adasd")
+			// this.$store.dispatch('getAddress')	
+			this.getAddress()
+		}
+		
+	}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
