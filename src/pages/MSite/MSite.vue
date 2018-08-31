@@ -70,14 +70,7 @@
 		},
 		mounted(){
 			this.$store.dispatch('getFoodCategorys')
-			//创建一个swiper实例对象，来实现轮播
-			new Swiper('.swiper-container',{
-				loop:true ,			//循环轮播
-				 // 分页器
-				pagination: {
-					el: '.swiper-pagination',
-				},
-			})
+			this.$store.dispatch('getShops')
 		},
 		//计算属性
 		computed:{
@@ -111,6 +104,24 @@
 			}
 			
 		},
+		watch:{
+			//数组中有数据了，在异步更新界面之前执行
+			categorys(value){
+				
+				//界面更新就立即创建Swiper对象
+				this.$nextTick(() => {		//一旦完成界面更新，立即调用
+					//创建一个swiper实例对象，来实现轮播
+					new Swiper('.swiper-container',{
+						loop:true ,			//循环轮播
+						// 分页器
+						pagination: {
+							el: '.swiper-pagination',
+						},
+					})
+				})
+				
+			}
+		}
   }
 </script>
 
