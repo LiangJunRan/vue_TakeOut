@@ -2,12 +2,18 @@
   <div class="msite">
     <!--首页头部-->
 		<HeaderTop :title="address.name">
-			<a slot="left" class="header_search">
+			<router-link slot="left" class="header_search" to="/search">
 				<i class="iconfont icon-sousuo"></i>
-			</a>
-			<a slot="right" class="header_login">
-				<span class="header_login_text">登录|注册</span>
-			</a>
+			</router-link>
+			<router-link slot="right" class="header_login" :to="userInfo._id?'/userinfo':'/login'">
+				<span class="header_login_text" v-if="!userInfo._id">
+          登录|注册
+        </span>
+        <span class="header_login_text" v-else>
+          <i class="inconfont icon-person"></i>
+        </span>
+
+			</router-link>
 		</HeaderTop>
     <!--首页导航-->
     <nav class="msite_nav">
@@ -52,7 +58,6 @@
 	
 	import 'swiper/dist/css/swiper.min.css'
 	
-	
 	import ShopList from '../../components/ShopList/ShopList'
 	
   export default {
@@ -73,7 +78,7 @@
 		},
 		//计算属性
 		computed:{
-			...mapState(['address','categorys']),
+			...mapState(['address','categorys','userInfo']),
 			
 			//根据categorys一维数组生成二维数组
 			//小数组中元素最大为8个

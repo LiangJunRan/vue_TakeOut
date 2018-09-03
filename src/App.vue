@@ -6,10 +6,15 @@
 </template>
 
 <script>
+  import vue from 'vue'
 	import {mapActions} from 'vuex'
 	import FooterGuide from './components/FooterGuide/FooterGuide.vue'
 	import {reqFoodTypes} from './API'
-	
+  //注册全局组件标签
+  import {Button} from 'mint-ui'
+
+  vue.component(Button.name,Button)   //<mt-button>
+
 	export default {
 		
 		components:{
@@ -24,6 +29,7 @@
 			console.log("adasd")
 			// this.$store.dispatch('getAddress')	
 			this.getAddress()
+      this.getUserInfo()
 		}
 		
 	}
