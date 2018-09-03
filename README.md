@@ -43,7 +43,10 @@ cd take_out
 npm run dev                    //运行该项目访问localhost：8080
 ```
 
+### 3.1jar包
 
+t  3.1.2
+a  2.1.4
 
 
 
